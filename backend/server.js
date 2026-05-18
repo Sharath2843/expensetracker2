@@ -10,7 +10,7 @@ connectDB();
 
 const app = express();
 
-const allowedOrigin = (process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/$/, '').trim();
+const allowedOrigin = (process.env.FRONTEND_URL || 'http://localhost:5173').trim().replace(/\/$/, '');
 
 app.use(cors({
     origin: allowedOrigin,
